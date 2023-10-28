@@ -1,4 +1,4 @@
-package com.example.happycompose.ui.components
+package com.example.happycompose.ui.components.story
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer

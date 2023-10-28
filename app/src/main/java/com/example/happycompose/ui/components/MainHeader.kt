@@ -26,6 +26,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
 import com.example.happycompose.R
+import com.example.happycompose.ui.components.common.AppIcon
 import com.example.happycompose.ui.theme.HappyComposeTheme
 
 @Composable
@@ -54,22 +55,8 @@ fun MainHeader() {
             horizontalArrangement = Arrangement.spacedBy(16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Icon(
-                imageVector = ImageVector.vectorResource(id = R.drawable.heart_outline),
-                contentDescription = "Heart Icon",
-                tint = Color.Black,
-                modifier = Modifier
-                    .size(24.dp)
-                    .clickable { /* Handle send icon click */ }
-            )
-            Icon(
-                imageVector = ImageVector.vectorResource(id = R.drawable.send_outline),
-                contentDescription = "Send Icon",
-                tint = Color.Black,
-                modifier = Modifier
-                    .size(24.dp)
-                    .clickable { /* Handle send icon click */ }
-            )
+            AppIcon(id = R.drawable.heart_outline, contentDescription = "likes")
+            AppIcon(id = R.drawable.send_outline, contentDescription = "direct")
         }
     }
 }

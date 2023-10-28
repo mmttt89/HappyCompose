@@ -93,4 +93,7 @@ dependencies {
 
     //live-data
     implementation "androidx.compose.runtime:runtime-livedata:1.5.4"
+
+    //pager
+    implementation "com.google.accompanist:accompanist-pager:0.19.0"
 }

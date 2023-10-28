@@ -32,11 +32,13 @@ class FeedViewModel @Inject constructor(private val feedRepository: FeedReposito
     }
 
     private fun dataListeners() {
+        // update stories
         coroutineScope.launch {
             feedRepository.stories.collect {
                 _storiesLiveData.postValue(it)
             }
         }
+        // update feeds
         coroutineScope.launch {
             feedRepository.feeds.collect{
                 _feedsLiveData.postValue(it)

@@ -1,4 +1,4 @@
-package com.example.happycompose.ui.components
+package com.example.happycompose.ui.components.story
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -15,6 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.happycompose.data.SampleData
 import com.example.happycompose.data.models.SingleStoryItem
+import com.example.happycompose.ui.components.common.CircleProfileButton
 import com.example.happycompose.ui.theme.HappyComposeTheme
 
 @Composable
@@ -32,7 +33,6 @@ fun StoryItem(storyItem: SingleStoryItem) {
         Spacer(modifier = Modifier.height(4.dp))
         Text(
             text = username,
-            color = Color.Black,
             style = MaterialTheme.typography.labelSmall,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,

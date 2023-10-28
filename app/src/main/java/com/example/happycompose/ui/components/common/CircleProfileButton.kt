@@ -1,4 +1,4 @@
-package com.example.happycompose.ui.components
+package com.example.happycompose.ui.components.common
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -22,7 +22,6 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
 import com.example.happycompose.R
-import com.example.happycompose.data.models.StoryItemData
 
 @Composable
 fun CircleProfileButton(imageUrl: String, width: Dp = 80.dp, border: Dp = 8.dp) {

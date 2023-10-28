@@ -32,11 +32,18 @@ val Typography = Typography(
     )
     */
 )
-val Typography.storyTextStyle: TextStyle
+val Typography.labelSmallCustom: TextStyle
     get() = TextStyle(
         fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Medium,
+        fontWeight = FontWeight.Bold,
         fontSize = 11.sp,
         lineHeight = 16.sp,
-        letterSpacing = 0.5.sp
+        letterSpacing = 0.5.sp,
+    )
+val Typography.smallTextCustom: TextStyle
+    get() = TextStyle(
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.Normal,
+        fontSize = 11.sp,
+        lineHeight = 16.sp,
     )

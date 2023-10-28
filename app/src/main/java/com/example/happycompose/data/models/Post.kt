@@ -8,4 +8,5 @@ data class Post(
     val commentsTotal: Int,
     val viewsTotal: Int,
     val shareUrl: String,
+    val description: String?,
 )
