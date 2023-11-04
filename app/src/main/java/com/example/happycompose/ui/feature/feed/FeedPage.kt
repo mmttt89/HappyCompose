@@ -9,15 +9,17 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.happycompose.ui.components.FeedList
 import com.example.happycompose.ui.components.MainHeader
 import com.example.happycompose.ui.components.story.StoriesList
 import com.example.happycompose.ui.theme.HappyComposeTheme
 
+
 @Composable
-fun MainPage() {
-    val feedViewModel = viewModel<FeedViewModel>()
+fun HomePage() {
+    val feedViewModel = hiltViewModel<FeedViewModel>()
     val stories by feedViewModel.stories.observeAsState(emptyList())
     val posts by feedViewModel.feeds.observeAsState(emptyList())
 
@@ -41,6 +43,6 @@ fun MainPage() {
 @Preview
 fun MainPagePreview() {
     HappyComposeTheme {
-        MainPage()
+        HomePage()
     }
 }
