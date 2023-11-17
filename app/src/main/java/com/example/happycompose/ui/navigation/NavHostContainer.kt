@@ -16,7 +16,7 @@ import com.example.happycompose.ui.feature.feed.HomePage
 @Composable
 fun NavHostContainer(
     navController: NavHostController,
-    padding: PaddingValues
+    padding: PaddingValues,
 ) {
 
     NavHost(

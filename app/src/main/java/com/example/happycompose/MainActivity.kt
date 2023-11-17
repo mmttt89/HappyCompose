@@ -32,7 +32,10 @@ class MainActivity : ComponentActivity() {
                         BottomNavigationBar(navController = navController)
                     },
                         content = {
-                            NavHostContainer(navController = navController, padding = it)
+                            NavHostContainer(
+                                navController,
+                                padding = it
+                            )
                         }
                     )
                 }

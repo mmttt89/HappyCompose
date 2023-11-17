@@ -15,7 +15,6 @@ import androidx.compose.ui.graphics.Color
 
 @Composable
 fun SearchScreen() {
-    // Column Composable,
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -27,7 +26,7 @@ fun SearchScreen() {
         // Icon Composable
         Icon(
             imageVector = Icons.Default.Search,
-            contentDescription = "Profile",
+            contentDescription = "Search",
             tint = Color(0xFF0F9D58)
         )
         // Text to Display the current Screen
