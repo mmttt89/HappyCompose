@@ -1,21 +1,30 @@
 package com.example.happycompose.ui.navigation
 
 import androidx.compose.foundation.layout.height
-import androidx.compose.runtime.Composable
-import androidx.navigation.NavHostController
-import androidx.compose.material.*
+import androidx.compose.material.BottomNavigation
+import androidx.compose.material.BottomNavigationItem
+import androidx.compose.material.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import androidx.navigation.compose.*
-import com.example.happycompose.di.Constants
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.currentBackStackEntryAsState
 
 
 @Composable
 fun BottomNavigationBar(navController: NavHostController) {
-
+    val items = remember {
+        listOf(
+            Screen.Home,
+            Screen.Search,
+            Screen.Create,
+            Screen.Reels,
+            Screen.Profile
+        )
+    }
     BottomNavigation(
         backgroundColor = MaterialTheme.colorScheme.background,
         modifier = Modifier.height(45.dp),
@@ -23,11 +32,13 @@ fun BottomNavigationBar(navController: NavHostController) {
         ) {
         val navBackStackEntry by navController.currentBackStackEntryAsState()
         val currentRoute = navBackStackEntry?.destination?.route
-        Screen.Items.forEach { navItem ->
+        items.forEach { navItem ->
             BottomNavigationItem(
                 selected = currentRoute == navItem.route,
                 onClick = {
-                    navController.navigate(navItem.route)
+                    navController.navigate(navItem.route){
+                        launchSingleTop = true
+                    }
                 },
                 icon = { Icon(imageVector = navItem.icon, contentDescription = navItem.label) },
             )

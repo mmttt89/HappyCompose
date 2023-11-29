@@ -17,3 +17,6 @@ val Purple45 = Color(0xFF468D86)
 val TextColorDark = Color(0xFFD5D2D3)
 val BackgroundDark = Color(0xFF4D4D4D)
 val BorderColorDark = Color(0xFFEBEBEB)
+
+// both
+val LiveColor = Color(0xFFBB86FC)

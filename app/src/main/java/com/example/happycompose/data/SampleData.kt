@@ -24,7 +24,7 @@ object SampleData {
         }
     }
 
-    val singleStoryItem = SingleStoryItem("1", "title", user, medias)
+    val singleStoryItem = SingleStoryItem("1", "title", user, medias, isLive = true)
 
     val singlePostItem = Post(
         id = "541",
